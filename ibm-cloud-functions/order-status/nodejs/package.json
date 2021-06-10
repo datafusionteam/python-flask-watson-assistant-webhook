@@ -1,0 +1,12 @@
+{
+  "name": "order-status-webhook",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "deploy": "ibmcloud fn action update order-status-webhook dist/bundle.js --kind nodejs:12"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
