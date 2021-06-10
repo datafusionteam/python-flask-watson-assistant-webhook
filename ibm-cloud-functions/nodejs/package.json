@@ -3,7 +3,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "deploy": "ibmcloud fn action update order-status-webhook dist/bundle.js --kind nodejs:12"
+    "deploy": "ibmcloud fn action update order-status-webhook dist/bundle.js --kind nodejs:12 --web yes"
   },
   "dependencies": {},
   "devDependencies": {

@@ -4,6 +4,12 @@ function main({ orderId, customerId }) {
   const customers = data.customers;
   const orders = data.orders;
 
+  if (!orderId && !customerId) {
+    return makeResponse({
+      error: "Order id or customer id is required."
+    }, 400)
+  }
+
   // See if we can find an order that matches the ID given
   if (orderId) {
     const order = orders.find((order) => order.id === orderId);
