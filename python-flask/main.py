@@ -13,6 +13,9 @@ def main(params: Dict[Text, Any]) -> Union[Text, Dict[Text, Any]]:
     order_id = params.get("orderId")
     customer_id = params.get("customerId")
 
+    if order_id is None and customer_id is None:
+        raise ValueError("Order id or customer id is required.")
+
     with open("data.json") as f:
         data = json.loads(f.read())
         orders = data.get("orders")

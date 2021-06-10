@@ -44,7 +44,7 @@ def hello_world():
     params = request.get_json(silent=True)
 
     if not params:
-        raise BadRequest
+        params = {}
 
     response = main(params)
     return jsonify(response)

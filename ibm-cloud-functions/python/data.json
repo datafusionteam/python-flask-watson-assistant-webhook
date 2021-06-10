@@ -1,0 +1,32 @@
+{
+  "orders": [
+    {
+      "id": 102234,
+      "title": "ACT Prep Textbook",
+      "tracking_number": 100000001,
+      "shipping_status": "IN_PROGRESS",
+      "shipping_provider": "USPS"
+    },
+    {
+      "id": 102235,
+      "title": "Shampoo",
+      "tracking_number": 100000002,
+      "shipping_status": "SHIPPED",
+      "shipping_provider": "FedEx"
+    },
+    {
+      "id": 102236,
+      "title": "4-Pack Bar Soap",
+      "tracking_number": 100000003,
+      "shipping_status": "DELIVERED",
+      "shipping_provider": "USPS"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1055664529,
+      "name": "Jessica Smith",
+      "orders": [102234, 102235, 102236]
+    }
+  ]
+}
