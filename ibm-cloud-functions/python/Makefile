@@ -1,5 +1,12 @@
 PACKAGE_NAME ?= my-webhook
 
+help:
+	@echo "make"
+	@echo "    package"
+	@echo "        Package python code into a zip file using PACKAGE_NAME environment variable (default: my-webhook)."
+	@echo "    deploy"
+	@echo "        Deploy packaged python code to IBM cloud functions."
+
 package:
 	zip -r $(PACKAGE_NAME).zip .
 
