@@ -1,7 +1,7 @@
 import json
 
 from flask import Flask, jsonify, request
-from werkzeug.exceptions import HTTPException, BadRequest
+from werkzeug.exceptions import HTTPException
 
 from main import main
 
@@ -43,7 +43,7 @@ def handle_general_exception(e):
 def hello_world():
     params = request.get_json(silent=True)
 
-    if not params:
+    if params is None:
         params = {}
 
     response = main(params)
