@@ -1,6 +1,8 @@
 import json
 from typing import Dict, Text, Any, Union
 
+from werkzeug.exceptions import BadRequest
+
 from utils import get_shipping_status
 
 
@@ -14,7 +16,7 @@ def main(params: Dict[Text, Any]) -> Union[Text, Dict[Text, Any]]:
     customer_id = params.get("customerId")
 
     if order_id is None and customer_id is None:
-        raise ValueError("Order id or customer id is required.")
+        raise BadRequest
 
     with open("data.json") as f:
         data = json.loads(f.read())
